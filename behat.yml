@@ -1,0 +1,24 @@
+default:
+  paths:
+    features:  Invotra_login/features
+    bootstrap: Invotra_login/features/bootstrap
+
+  context:      
+    class: 'FeatureContext'
+    parameters:
+      wd_host: 'http://127.0.0.1:4444/wd/hub'
+      wd_capabilities: { "browser": "firefox", "version": "14"}
+
+annotations:
+  paths:
+    features: features/annotations
+
+closures:
+  paths:
+    features: features/closures
+
+extensions:
+        Behat\MinkExtension\Extension:
+            base_url: http://jonnie.invotra.io1test.com
+            goutte: ~
+            selenium2: 
